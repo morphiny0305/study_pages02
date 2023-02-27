@@ -1,0 +1,147 @@
+@charset "UTF-8";
+/* 공통 */
+.hidden{display: none;}
+.inner{width: 90%;max-width: 1132px;margin: auto;}
+.sec-title{font-size: 2.625em;/*42px*/color: #3f51b5;font-style: normal;font-weight: 400;text-transform: uppercase;}
+.para{font-family: 'PT Serif', serif;color: #616161;font-size: 0.875em;line-height: 1.5;}
+
+/* 구분선1 */
+.line1{width: 90%;max-width: 1132px;margin: 70px auto;background: #eee;}
+
+/* 구분선2 */
+.line2{width: 20%;max-width: 1132px;margin: 70px auto;background: #3f51b5;}
+
+/* mobile area----------------------------------------- */
+/* body{background: pink;} */
+/* 모바일 헤더 */
+header{width: 100%;height:50px;position: relative;/*nav, 햄버거메뉴의 기준*/}
+header .header-inner{width: 90%;margin: auto;}
+
+/* 모바일 로고 */
+header h1{float: left;padding-top: 10px;}
+header h1 a{color: #3f51b5;font-size: 1.625em;/*26px*/}
+
+/* 모바일 메뉴 */
+header nav{clear: both;width: 100%;}
+header nav ul.gnb{position: absolute;top: 100%;left: 0;width: 100%;background: #3f51b5;display: none;}
+header nav ul.gnb li{border-bottom: 1px solid #303f9f;}
+header nav ul.gnb li a{display: block;padding: 15px 0 15px 5%;color: #fff;font-weight: 200;font-size: 	0.875em;/*14px*/text-transform: uppercase;}
+
+/* 모바일 햄버거메뉴 */
+header .menu-toggle-btn{display: block;width: 20px;cursor: pointer;position: absolute;top: 15px;right: 5%;}
+header .menu-toggle-btn span{display: block;width: 100%;height: 2px;background: #3f51b5;}
+header .menu-toggle-btn span:nth-child(2){margin: 5px 0;}
+
+/* 모바일 슬라이드 영역 */
+.selide-section img{width: 100%;max-width: 100%;}
+
+/* 모바일 디스플레이 영역 */
+.display-section{margin-top: 60px;}
+.display-section .sec-title{text-align: center;}
+.display-section .para{text-align: center;margin-top: 30px;}
+
+/* 모바일 프로모션 영역 */
+.promotion-section{margin-top: 60px;}
+.promotion-section div{text-align: center;margin-top: 30px;}
+.promotion-section div a img{height: 50px;}
+.promotion-section div a h3{color: #3f51b5;margin: 20px 0;text-transform: uppercase;font-weight: 400;}
+
+/* 모바일 워크 영역 */
+.work-section h2{text-align: center;margin-bottom: 50px;}
+.work-section ul li{width: 100%;}
+
+/* 마우스 파란색 배경 호버효과  */
+.work-section ul li a{display: block;width: 100%;height: 100%;position: relative;/*info영역의 기준*/}
+.work-section ul li a::before{display: block;content: "";position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: #3f51b5;opacity: 0;transition: all 0.2s;}
+.work-section ul li a:hover::before{opacity: 0.8;}
+
+/* 마우스호버했을 때 글상자가 위에서 아래로 내려오는 효과 */
+.work-section ul li a div{position: absolute;top: 0;left: 20px;transition: all 0.2s;opacity: 0;}
+.work-section ul li a:hover div{opacity: 1;transform: translateY(20px);}
+.work-section ul li a div h3{color: #fff;margin-bottom: 5px;}
+.work-section ul li a div span{color: #fff;text-transform: uppercase;font-size: 0.813em;/*13px*/}
+.work-section ul li img{width: 100%;max-width: 100%;}
+
+/* 모바일 블로그 영역 */
+.blog-section h2{text-align: center;margin-bottom: 30px;}
+.blog-section ul li a img{width: 100%;max-width: 100%;margin-bottom: 10px;}
+.blog-section ul li a time{color: #929292;font-size: 0.688em;/*11px*/}
+.blog-section ul li a p{margin: 10px 0 30px;color: #424242;}
+
+/* 모바일 콘텍트 영역 */
+.contact-section h2{text-align: center;}
+.contact-section div.form-box{margin-top: 30px;text-align: right;}
+.contact-section div.form-box form fieldset div.form-box1 input{margin-bottom: 30px;padding: 5px;text-indent: 10px;box-sizing: border-box;}
+.contact-section div.form-box form fieldset div.form-box2 textarea{width: 100%;height: 150px;padding: 5px;box-sizing: border-box;text-indent: 10px;}
+
+.contact-section div.form-box form button{padding: 15px;background: #3f51b5;color: #fff;cursor: pointer;margin-top: 30px;border:none;text-transform: uppercase;}
+
+/* 모바일 푸터영역 */
+footer{margin-top: 70px;}
+footer iframe{width: 100%;max-width: 100%;height: 300px;}
+footer p{text-align: center;margin: 20px 0;text-transform: uppercase;font-size: 0.813em;/*13px*/color: #3f51b5;}
+
+
+/* tab area--------------------------------------------- */
+@media all and (min-width:768px){
+    /* body{background: palegreen;} */
+    
+    /* 탭 헤더영역 */
+    header .header-inner{display: flex;justify-content: space-between;align-items: flex-end;}
+    header .header-inner nav{width: auto;}
+    header .header-inner nav ul.gnb{position: static;background: none;display: flex !important;}
+    header nav ul.gnb li{border-bottom: 0;margin-left: 15px;}
+    header nav ul.gnb li a{padding: 0;}
+    header .menu-toggle-btn{display: none;}
+  
+    /* 탭 디스플레이 영역 */
+    .display-section .para{line-height: 2;}
+  
+    /* 탭 프로모션 영역 */
+    .promotion-section{display: flex;justify-content: space-between;}
+    .promotion-section div{width: 23%;}
+  
+    /* 탭 워크 영역 */
+    .work-section ul{display: flex;flex-flow: row wrap;}
+    .work-section ul li{width: 50%;}
+  
+    /* 탭 블로그 영역 */
+    .blog-section ul{display: flex;justify-content: space-between;}
+    .blog-section ul li{width: 30%;}
+  
+    /* 탭 콘텍트 영역 */
+    .contact-section div.form-box form fieldset{display: flex;justify-content: space-between;}
+    .contact-section div.form-box form fieldset div{width: 48%;}
+    .contact-section div.form-box form fieldset div.form-box1{display: flex;flex-wrap: wrap;}
+    .contact-section div.form-box form fieldset div.form-box1 input{margin-bottom: 0;}
+  
+    /* 탭 푸터 영역 */
+    footer iframe{height: 400px;}
+  }
+
+
+  /* pc area------------------------------------------------ */
+@media all and (min-width:1132px){
+    /* body{background: paleturquoise;} */
+  
+    /* PC 디스플레이 영역 */
+    .display-section{display: flex;justify-content: space-between;}
+    .display-section .para{margin-top: 0;position: relative;text-align: left;}
+    .display-section .para::before{content: "";position: absolute;top: 9px;left: -15px;width: 2px;height: 45px;background: #929292;}
+  
+    /* PC 워크 영역 */
+    .work-section h2{text-align: left;}
+  
+    /* PC 블로그 영역 */
+    .blog-section{display: flex;justify-content: space-between;}
+    .blog-section h2{width: 20%;}
+    .blog-section ul{width: 70%;}
+  
+    /* PC 콘텍트 영역 */
+    .contact-section{display: flex;justify-content: space-between;}
+    .contact-section h2{width: 20%;}
+    .contact-section div.form-box{width: 70%;}
+  
+    /* PC 푸터 영역 */
+    footer iframe{height: 500px;}
+  }
